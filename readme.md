@@ -1,4 +1,10 @@
-BANKING APP
+<h1>BANKING APP</h1>
+
+To run:
+- Bundle install
+- irb -r "./lib/bank_account"
+- ?????
+- profit
 
 Ive identified 3 classes so far: 
 
