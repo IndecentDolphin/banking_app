@@ -10,6 +10,10 @@ describe Account do
     expect(subject.activity_log).to eq([])
   end
 
+  it "should initialise with an empty balance log" do
+    expect(subject.balance_log).to eq([])
+  end
+
   describe ".credit" do
     it "credits the account" do
       subject.credit(20)
@@ -20,6 +24,11 @@ describe Account do
       subject.credit(2000)
       expect(subject.activity_log.length).to eq(1)
     end  
+
+    it "adds the latest balance to the balance log" do
+      subject.credit(2000)
+      expect(subject.balance_log).to eq([2000])
+    end
   end
 
   describe ".withdraw" do
@@ -27,6 +36,18 @@ describe Account do
       subject.credit(2000)
       subject.withdraw(500)
       expect(subject.balance).to eq(1500)
+    end
+
+    it "adds a withdraw transaction to the activity log" do
+      subject.credit(2000)
+      subject.withdraw(500)
+      expect(subject.activity_log.length).to eq(2)
+    end
+    it "adds the latest balance to the balance log" do
+      subject.credit(2000)
+      expect(subject.balance_log).to eq([2000])
+      subject.withdraw(500)
+      expect(subject.balance_log).to eq([2000, 1500])
     end
   end
 end
