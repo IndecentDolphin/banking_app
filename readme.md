@@ -11,7 +11,7 @@ I would like to deposit funds to my account.
 
 As a user,
 To use my money
-I would like to withdrawer from my account.
+I would like to withdraw from my account.
 
 As a user,
 To see my account stats

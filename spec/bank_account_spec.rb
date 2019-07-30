@@ -12,4 +12,12 @@ describe Account do
       expect(subject.balance).to eq(20)
     end
   end
+
+  describe ".withdraw" do
+    it "withdraws money from the account" do
+      subject.credit(2000)
+      subject.withdraw(500)
+      expect(subject.balance).to eq(1500)
+    end
+  end
 end
