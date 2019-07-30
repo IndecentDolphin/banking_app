@@ -15,6 +15,11 @@ describe Account do
       subject.credit(20)
       expect(subject.balance).to eq(20)
     end
+
+    it "adds a credit transaction to the activity log" do
+      subject.credit(2000)
+      expect(subject.activity_log.length).to eq(1)
+    end  
   end
 
   describe ".withdraw" do
