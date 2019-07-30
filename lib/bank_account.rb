@@ -35,6 +35,7 @@ class Account
       end
       puts "#{balance_log[index]}".center(30)
     end
+    print_footer
   end
 
   private
@@ -44,5 +45,10 @@ class Account
     print "CREDIT".center(20)
     print "DEBIT".center(20)
     puts "BALANCE".center(30)
+    puts "-"  * 100
+  end
+
+  def print_footer
+    puts "THANK YOU, COME AGAIN".center(100)
   end
 end
