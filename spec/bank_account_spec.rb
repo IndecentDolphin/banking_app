@@ -6,6 +6,10 @@ describe Account do
     expect(subject.balance).to eq(0)
   end
 
+  it "should initialise with no activity" do
+    expect(subject.activity_log).to eq([])
+  end
+
   describe ".credit" do
     it "credits the account" do
       subject.credit(20)
