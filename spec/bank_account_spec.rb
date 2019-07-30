@@ -1,7 +1,6 @@
 require 'bank_account'
 
 describe Account do
-
   it 'it initialised with an empty account' do
     expect(subject.balance).to eq(0)
   end
@@ -43,6 +42,7 @@ describe Account do
       subject.withdraw(500)
       expect(subject.activity_log.length).to eq(2)
     end
+
     it "adds the latest balance to the balance log" do
       subject.credit(2000)
       expect(subject.balance_log).to eq([2000])
