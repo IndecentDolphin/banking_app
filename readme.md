@@ -1,15 +1,27 @@
 <h1>BANKING APP</h1>
 
-To run:
+To run tests:
 - Bundle install
+- rspec
+
+To run program from project directory
 - irb -r "./lib/bank_account"
-- ?????
-- profit
+- account = Account.new
+- bank = Interface.new
 
-Ive identified 2 classes so far: 
+To modify account
+- account.credit(some_amount)
+- account.withdraw(some_amount)
 
-Account, which will manage the current balance and activity. Will manage the display of statements.
+To view statement
+- bank.display(account)
+
+
+Ive identified 3 classes so far: 
+
+Account, which will manage the current balance and activity. 
 Transaction, which will manage each individual change to the account.
+Interface, which will manage the display of statements.
 
 
 --USER STORIES
