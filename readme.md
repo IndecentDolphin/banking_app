@@ -6,11 +6,11 @@ To run:
 - ?????
 - profit
 
-Ive identified 3 classes so far: 
+Ive identified 2 classes so far: 
 
-Account, which will manage the current balance and activity.
+Account, which will manage the current balance and activity. Will manage the display of statements.
 Transaction, which will manage each individual change to the account.
-Interface, which will manage the display of statements.
+
 
 --USER STORIES
 
